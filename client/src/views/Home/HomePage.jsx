@@ -19,7 +19,7 @@ const GET_MATCHUPS = gql`
 `;
 
 function HomePage() {
-  // TODO: 🥅
+// Gives the result of dynamic data without having to refresh the page.
   const { loading, data } = useQuery(GET_MATCHUPS, {
     fetchPolicy: "network-only",
   });
@@ -27,6 +27,7 @@ function HomePage() {
   return (
     <Container heading="Welcome to Tech Matchup!">
       <Section heading="Here is a list of matchups you can vote on:">
+      {/* Ternary : Conditional Rendering */}
         {loading ? (
           <p>Please stand by...⏳</p>
         ) : (
