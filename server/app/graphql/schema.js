@@ -8,6 +8,7 @@ export default gql`
   }
 
   type Matchup {
+    # ID! means it cannot be null
     _id: ID!
     tech1: String!
     tech2: String!
@@ -20,6 +21,7 @@ export default gql`
     name: String!
   }
 
+  # At the end of line 25, ': Matchup' is what we are expecting to get back.
   type Mutation {
     createMatchup(tech1: String!, tech2: String!): Matchup
 
