@@ -6,6 +6,7 @@ function Container({ heading, children }) {
   return (
     <section className="bg-white rounded-md border-black border-2 max-w-screen-lg">
       <h1 className="bg-gray-900 font-extrabold text-4xl p-4 text-center text-gray-50">
+        {/* Dynamic heading prop as seen in MatchupPage.jsx */}
         {heading}
       </h1>
       {children}
